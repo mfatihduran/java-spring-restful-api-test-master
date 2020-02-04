@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uk.co.huntersix.spring.rest.referencedata.PersonDataServiceTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-02-04T11:18:49" hostname="Mehmets-MBP.home" time="0.005">
+  <properties/>
+  <testcase name="shouldFindExistingPersons" classname="uk.co.huntersix.spring.rest.referencedata.PersonDataServiceTest" time="0.003"/>
+  <testcase name="shouldThrowExceptionWhenNoPersonFound" classname="uk.co.huntersix.spring.rest.referencedata.PersonDataServiceTest" time="0.001"/>
+  <testcase name="shouldAddIfPersonNotExist" classname="uk.co.huntersix.spring.rest.referencedata.PersonDataServiceTest" time="0.0"/>
+  <testcase name="shouldThrowExceptionWhenUpdatingIfPersonNotExists" classname="uk.co.huntersix.spring.rest.referencedata.PersonDataServiceTest" time="0.0"/>
+  <testcase name="shouldUpdateExistingPerson" classname="uk.co.huntersix.spring.rest.referencedata.PersonDataServiceTest" time="0.0"/>
+  <testcase name="shouldFindExistingPerson" classname="uk.co.huntersix.spring.rest.referencedata.PersonDataServiceTest" time="0.0"/>
+  <testcase name="shouldThrowExceptionWhenNoPersonsFound" classname="uk.co.huntersix.spring.rest.referencedata.PersonDataServiceTest" time="0.001"/>
+  <testcase name="shouldThrowExceptionWhenAddingIfPersonExists" classname="uk.co.huntersix.spring.rest.referencedata.PersonDataServiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

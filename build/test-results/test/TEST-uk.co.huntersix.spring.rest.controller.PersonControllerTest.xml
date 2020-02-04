@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uk.co.huntersix.spring.rest.controller.PersonControllerTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2020-02-04T11:18:48" hostname="Mehmets-MBP.home" time="0.25">
+  <properties/>
+  <testcase name="shouldReturnNoContentFoundByHavingNoMatch" classname="uk.co.huntersix.spring.rest.controller.PersonControllerTest" time="0.044"/>
+  <testcase name="shouldReturnPersonByHavingSingleMatch" classname="uk.co.huntersix.spring.rest.controller.PersonControllerTest" time="0.086"/>
+  <testcase name="shouldUpdateFirstNameIfPersonExists" classname="uk.co.huntersix.spring.rest.controller.PersonControllerTest" time="0.059"/>
+  <testcase name="shouldReturnPersonFromService" classname="uk.co.huntersix.spring.rest.controller.PersonControllerTest" time="0.016"/>
+  <testcase name="shouldReturnPersonsByHavingMultipleMatches" classname="uk.co.huntersix.spring.rest.controller.PersonControllerTest" time="0.008"/>
+  <testcase name="shouldReturnNoContentWhenNoPersonFound" classname="uk.co.huntersix.spring.rest.controller.PersonControllerTest" time="0.007"/>
+  <testcase name="shouldReturnOKWhenNewPersonRecorded" classname="uk.co.huntersix.spring.rest.controller.PersonControllerTest" time="0.007"/>
+  <testcase name="shouldNotUpdateFirstNameIfPersonNotExist" classname="uk.co.huntersix.spring.rest.controller.PersonControllerTest" time="0.004"/>
+  <testcase name="shouldReturnConflictWhenPostSentIfPersonExists" classname="uk.co.huntersix.spring.rest.controller.PersonControllerTest" time="0.009"/>
+  <system-out><![CDATA[2020-02-04 11:18:48.079  INFO 6465 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [uk.co.huntersix.spring.rest.controller.PersonControllerTest], using SpringBootContextLoader
+2020-02-04 11:18:48.080  INFO 6465 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [uk.co.huntersix.spring.rest.controller.PersonControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-02-04 11:18:48.080  INFO 6465 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [uk.co.huntersix.spring.rest.controller.PersonControllerTest]: PersonControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-02-04 11:18:48.097  INFO 6465 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration uk.co.huntersix.spring.rest.Application for test class uk.co.huntersix.spring.rest.controller.PersonControllerTest
+2020-02-04 11:18:48.097  INFO 6465 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2020-02-04 11:18:48.099  INFO 6465 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5661749d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6fde5ee8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1eccde34, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2304f724, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7e1caa45, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@63288270, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1b6ddd5f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1fd4a4c1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4817bfc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@231d521e]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.6.RELEASE)
+
+2020-02-04 11:18:48.125  INFO 6465 --- [    Test worker] u.c.h.s.r.c.PersonControllerTest         : Starting PersonControllerTest on Mehmets-MBP with PID 6465 (started by mfd in /Users/mfd/Documents/java-spring-restful-api-test-master)
+2020-02-04 11:18:48.128  INFO 6465 --- [    Test worker] u.c.h.s.r.c.PersonControllerTest         : No active profile set, falling back to default profiles: default
+2020-02-04 11:18:48.737  INFO 6465 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 11:18:48.824  INFO 6465 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-02-04 11:18:48.824  INFO 6465 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-02-04 11:18:48.828  INFO 6465 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2020-02-04 11:18:48.842  INFO 6465 --- [    Test worker] u.c.h.s.r.c.PersonControllerTest         : Started PersonControllerTest in 0.741 seconds (JVM running for 5.125)
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /persons/smith
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = uk.co.huntersix.spring.rest.controller.PersonController
+           Method = public java.util.List<uk.co.huntersix.spring.rest.model.Person> uk.co.huntersix.spring.rest.controller.PersonController.persons(java.lang.String) throws uk.co.huntersix.spring.rest.exception.PersonNotFoundException
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.IllegalStateException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"9"]
+     Content type = text/plain;charset=UTF-8
+             Body = Not found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /persons/johns
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = uk.co.huntersix.spring.rest.controller.PersonController
+           Method = public java.util.List<uk.co.huntersix.spring.rest.model.Person> uk.co.huntersix.spring.rest.controller.PersonController.persons(java.lang.String) throws uk.co.huntersix.spring.rest.exception.PersonNotFoundException
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":4,"firstName":"Bob","lastName":"Johns"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /person/smith/mary
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = uk.co.huntersix.spring.rest.controller.PersonController
+           Method = public uk.co.huntersix.spring.rest.model.Person uk.co.huntersix.spring.rest.controller.PersonController.person(java.lang.String,java.lang.String) throws uk.co.huntersix.spring.rest.exception.PersonNotFoundException
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+     Content type = application/json;charset=UTF-8
+             Body = {"id":7,"firstName":"Mary","lastName":"Smith"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /persons/smith
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = uk.co.huntersix.spring.rest.controller.PersonController
+           Method = public java.util.List<uk.co.huntersix.spring.rest.model.Person> uk.co.huntersix.spring.rest.controller.PersonController.persons(java.lang.String) throws uk.co.huntersix.spring.rest.exception.PersonNotFoundException
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":8,"firstName":"Mary","lastName":"Smith"},{"id":9,"firstName":"Harry","lastName":"Smith"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /person/smith/mary
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = uk.co.huntersix.spring.rest.controller.PersonController
+           Method = public uk.co.huntersix.spring.rest.model.Person uk.co.huntersix.spring.rest.controller.PersonController.person(java.lang.String,java.lang.String) throws uk.co.huntersix.spring.rest.exception.PersonNotFoundException
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.IllegalStateException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"9"]
+     Content type = text/plain;charset=UTF-8
+             Body = Not found
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /persons
+       Parameters = {}
+          Headers = [Content-Type:"application/json", Accept:"application/json"]
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = uk.co.huntersix.spring.rest.controller.PersonController
+           Method = public java.lang.Boolean uk.co.huntersix.spring.rest.controller.PersonController.persons(uk.co.huntersix.spring.rest.model.Person) throws uk.co.huntersix.spring.rest.exception.ExistingPersonException
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.IllegalStateException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 409
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"14"]
+     Content type = application/json;charset=UTF-8
+             Body = Already exists
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
